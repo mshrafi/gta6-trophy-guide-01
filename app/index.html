@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI (PS5)</title>
+<meta name="description" content="The complete offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: roadmap, missable flags, cited guides, checklist with saved progress.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Grand Theft Auto VI · PlayStation 5 · Offline guide</p>
+    <h1>LEONIDA<br><span>TROPHY GUIDE</span></h1>
+    <p class="lede">All 55 trophies — 1 Platinum, 2 Gold, 6 Silver, 46 Bronze — with a roadmap to the Platinum, the list's only missable trophy flagged, and a guide for every trophy that names its source. Tick them off as you earn them; your progress stays in this browser.</p>
+    <div class="progress-wrap" aria-label="Overall progress">
+      <div class="progress-numbers"><strong id="earnedCount">0</strong><span> / 55 earned</span><span id="earnedPct" class="pct">0%</span></div>
+      <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+      <div class="grade-chips" id="gradeChips"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="missable-banner" id="missableBanner" aria-label="Missable trophy warning">
+    <p class="banner-kicker">Read this first</p>
+    <h2>One trophy can be missed</h2>
+    <p><strong>Positive Mental Attitude</strong> (meditate at every spot) is the only trophy the guides flag as possibly missable: one meditation spot is only reachable in Chapter 1. Meditate at every spot you find in Chapter 1 before the story moves on — the rest can be visited later. <a href="#trophy-28">Jump to it ↓</a></p>
+    <p class="banner-source">Flagged by GTABase and PowerPyx, via <a href="https://egamers.io/gta-6-trophy-list-all-55-trophies-and-achievements-plus-the-hardest-ones/" target="_blank" rel="noopener">EGamers</a> and <a href="https://gtascoop.com/guides/gta-6-trophies-achievements/" target="_blank" rel="noopener">GTAScoop</a>. Story trophies cannot be missed — they unlock as the story plays.</p>
+  </section>
+
+  <section class="roadmap" id="roadmap" aria-label="Roadmap to the Platinum">
+    <h2>Roadmap to the Platinum</h2>
+    <p class="section-intro">Six stages, in order. Guides put the full run at around 200 hours; the story alone takes 50–60. Do Stage 1's meditation spots as you go — everything else can wait until after the credits.</p>
+    <ol class="stages" id="stages"></ol>
+  </section>
+
+  <section class="tracker" id="tracker" aria-label="Trophy tracker">
+    <div class="tracker-head">
+      <h2>Trophy tracker</h2>
+      <p class="section-intro">Tick a trophy when it pops. Filters, search and the spoiler setting only change what you see — your progress is saved in this browser and never leaves it.</p>
+    </div>
+
+    <div class="controls">
+      <label class="search">Search
+        <input id="search" type="search" placeholder="Trophy, mission or keyword…" autocomplete="off">
+      </label>
+      <label>Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <div class="kind-chips" id="kindChips" role="group" aria-label="Filter by kind"></div>
+      <label class="toggle"><input id="missableOnly" type="checkbox"> Missable only</label>
+      <label class="toggle"><input id="spoilerToggle" type="checkbox" checked> Hide story spoilers</label>
+      <label class="toggle"><input id="hideEarned" type="checkbox"> Hide earned</label>
+      <div class="data-buttons">
+        <button id="exportBtn" type="button">Export progress</button>
+        <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+        <button id="resetBtn" type="button" class="danger">Reset</button>
+      </div>
+    </div>
+
+    <p id="resultCount" class="result-count" aria-live="polite"></p>
+    <div class="cards" id="cards"></div>
+    <p id="emptyState" class="empty-state" hidden>No trophies match these filters. <button id="clearFilters" type="button">Clear filters</button></p>
+  </section>
+
+  <section class="sources" aria-label="Sources">
+    <h2>Sources</h2>
+    <p>Every trophy's name, description and grade is as PlayStation publishes it. The guides on this page are written for this entry in its own words; each one names the guide it draws on, and where the guides are still confirming a method it says so instead of guessing. No guide text is copied from these sources.</p>
+    <ul id="sourceList"></ul>
+    <p class="fine-print">Grand Theft Auto, GTA, Vice City and Leonida are properties of their owners. This guide is an independent, unofficial fan-made tracker; it uses no Rockstar logo, artwork or game screenshots. Works fully offline — it loads nothing from the network.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Trophy Guide · 55 trophies · Built for the make.fun GTA 6 trophy guide bounty · Progress is stored only in your browser (localStorage).</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
